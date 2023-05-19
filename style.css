@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.active{
+    display: block;
+}
+.inactive{
+    display: none;
+}
+.row{
+    align-items:center;
+}
+
+.thumbnails{
+    height: 100px;
+}
+img{
+    max-width: 100px;
+    max-height: 100%;
+}
+.fa-solid.fa-circle-right{
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+}
+.fa-solid.fa-circle-left{
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+    top:50%;
+    left:5px;
+}

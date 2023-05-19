@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>js-array-carousel</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="row">
+            <!-- img , title and text -->
+            <div class="thumbnails">
+                <img 
+                v-for="img in movie.images":src="img" class="thumbnails img">
+            </div>
+
+            <h1 class="title"> Titolo: {{movie.title[activeImage]}}</h1>
+            <p class="text"> {{movie.text[activeImage]}}</p>
+            
+            <!-- button previous and next -->
+            <div id="previous"><i class="fa-solid fa-circle-left"></i></div>
+            <div id="next"><i class="fa-solid fa-circle-right"></i></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
