@@ -2,10 +2,6 @@
 const elContainer = document.getElementById ("elContainer");
 console.log(elContainer);
 
-
-//immagine attiva al momento
-let activeImage = 2;
-
 //Select tasto Nextf
 const next = document.getElementById("next");
 console.log(next);
@@ -45,6 +41,21 @@ createApp({
             }
         }
     },
+    methods: {
+        nextButton() {
+            console.log("mi hai cliccato");
+            this.activeImage++;
+            if( this.activeImage === this.movie.title.length) {
+                this.activeImage = 0;
+            }
+        },
+        prevButton(){
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage = this.movie.title.length - 1;
+            }
+        }
+    }
     
 }) .mount("#app");
 

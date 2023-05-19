@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 .active{
-    display: block;
+    border: 5px solid rgb(0, 255, 89);
 }
 .inactive{
-    display: none;
+    border : 5px solid rgb(255, 0, 0);
 }
 .row{
     align-items:center;
