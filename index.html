@@ -12,13 +12,19 @@
 <body>
     <div id="app">
         <div class="row">
-            <!-- img , title and text -->
+            <!-- Movie Image -->
+            <div class="main-img">
+                <img :src="movie.images[activeImage]" alt="">
+            </div>
+            <!-- thumbnails -->
             <div class="thumbnails">
                 <img 
-                v-for="img in movie.images":src="img" class="thumbnails img">
+                v-for="(img, index) in movie.images":src="img" class="thumbnails"
+                :class="activeImage === index ? 'active' : ''">
             </div>
-
+            <!-- title -->
             <h1 class="title"> Titolo: {{movie.title[activeImage]}}</h1>
+            <!-- text -->
             <p class="text"> {{movie.text[activeImage]}}</p>
             
             <!-- button previous and next -->

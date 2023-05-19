@@ -11,15 +11,28 @@
 }
 .row{
     align-items:center;
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
 }
 
 .thumbnails{
     height: 100px;
 }
-img{
-    max-width: 100px;
+.thumbnails img{
+    max-width: calc(100% / 5);
     max-height: 100%;
 }
+
+.main-img{
+width: 100%;
+}
+
+.main-img img{
+    width: 70%;
+}
+
+
 .fa-solid.fa-circle-right{
     font-size: 50px;
     color: rgb(255, 0, 0);
