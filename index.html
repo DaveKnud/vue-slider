@@ -22,14 +22,20 @@
                 v-for="(img, index) in movie.images":src="img" class="thumbnails"
                 :class="activeImage === index ? 'active' : ''">
             </div>
-            <!-- title -->
-            <h1 class="title"> Titolo: {{movie.title[activeImage]}}</h1>
-            <!-- text -->
-            <p class="text"> {{movie.text[activeImage]}}</p>
+          
+            <div class="text-card">
+                  <!-- title -->
+                <h1 class="title"> Titolo: {{movie.title[activeImage]}}</h1>
+                <!-- text -->
+                <p class="text"> {{movie.text[activeImage]}}</p>
+            </div>
             
             <!-- button previous and next -->
-            <div id="previous" @click = "prevButton"><i class="fa-solid fa-circle-left"></i></div>
-            <div id="next" @click = "nextButton"><i class="fa-solid fa-circle-right"></i></div>
+            <div class="bottons">
+                <div id="previous" @click = "prevButton"><i class="fa-solid fa-circle-left"></i></div>
+                <div id="next" @click = "nextButton"><i class="fa-solid fa-circle-right"></i></div>
+            </div>
+            
         </div>
     </div>
     
